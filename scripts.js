@@ -1,13 +1,19 @@
-
-function newItem(){
 $(document).ready(function(
     //Add a new item to the list
     $('#add-button').on('click', function() {
         var newItem = $('#new-item').val();
         if (newItem !== '') {
-            
+            var listItem = $('<li>').text(newItem);
+            $('#list').append(listItem);
+            $('#new-item').val('');
         }
-    })
+    });
+
+    //Cross out item from list
+    $('list').on('click', 'li', function() {
+        $(this).toggleClass('completed');
+    });
+
     )
 ))
     //javascript
