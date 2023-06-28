@@ -14,7 +14,13 @@ $(document).ready(function(
         $(this).toggleClass('completed');
     });
 
-    )
+    //Delete an item from the list
+    $('list').on('click', 'span', function(event) {
+        $(this).parent().fadeOut(500, function() {
+            $(this).remove();
+        });
+        event.stopPropagation();
+    });
 ))
     //javascript
     //1. Adding a new item to the list of items: 
