@@ -1,6 +1,15 @@
 
 function newItem(){
-
+$(document).ready(function(
+    //Add a new item to the list
+    $('#add-button').on('click', function() {
+        var newItem = $('#new-item').val();
+        if (newItem !== '') {
+            
+        }
+    })
+    )
+))
     //javascript
     //1. Adding a new item to the list of items: 
        let li = document.createElement("li");
